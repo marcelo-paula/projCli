@@ -1,0 +1,165 @@
+:root{
+    --cor-branco: #fff;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Ubuntu", sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+.hide {
+    display: none !important;
+}
+
+.container {
+    width: 600px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Form */
+.form {
+    margin-bottom: 30px;
+}
+
+.form h3 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.form-input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 70%;
+    margin-right: 10px;
+}
+
+button#search {
+    background-color: #0d6efd;
+    border: none;
+    border-radius: 5px;
+    color: var(--cor-branco);
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+button#search:hover {
+    background-color: #0b5ed7;
+}
+
+/* Clima */
+#weather-data,
+#error-message,
+#loader,
+#suggestions {
+    border-top: 1px solid var(--cor-branco);
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    text-align: center;
+}
+
+#weather-data h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.6rem;
+}
+
+#weather-data h2 i {
+    font-size: 1rem;
+}
+
+#weather-data span {
+    margin: 0.6rem;
+}
+
+#temperature {
+    font-size: 4rem;
+}
+
+#country {
+    height: 15px;
+}
+
+#description-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.6rem 0;
+}
+
+#description {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+#details-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#details-container #umidity {
+    border-right: 1px solid var(--cor-branco);
+    margin: 0.6rem;
+    padding: 0.6rem;
+}
+
+/* Loader */
+#loader i {
+    animation: rotate 1.5s linear infinite;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Sugestões */
+#suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+#suggestions button {
+    background-color: #eee;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+    padding: 10px 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+#suggestions button:hover {
+    background-color: #d5d5d5;
+}

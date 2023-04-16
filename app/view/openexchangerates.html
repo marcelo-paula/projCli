@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clima agora!</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"/>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="app/styles/openexchangerates.css" />
+    <script src="scripts/openexchangerates.js" defer></script>
+</head>
+<body>
+
+    <div style="max-width: 800px; margin: 0 auto;">
+        <h1>Taxas de câmbio</h1>
+
+        <div style="display: flex; align-items: center; margin-bottom:
+            24px;">
+            <label for="currency">Escolha uma moeda:</label>
+            <select id="currency">
+                <option value="EUR">Euro</option>
+                <option value="GBP">Libra Esterlina</option>
+                <option value="JPY">Iene Japonês</option>
+                <option value="CAD">Dólar Canadense</option>
+                <option value="AUD">Dólar Australiano</option>
+                <option value="BRL">Real</option>
+            </select>
+            <button onclick="getExchangeRate()">Buscar taxa</button>
+        </div>
+
+        <div>
+            <p>1 USD = <span id="rate"></span></p>
+        </div>
+
+        <div style="margin-top: 48px;">
+            <h2>Moedas disponíveis:</h2>
+            <button onclick="getCurrencies()">Atualizar lista</button>
+            <ul id="currencies-list"></ul>
+        </div>
+    </div>
+</body>
+</html>

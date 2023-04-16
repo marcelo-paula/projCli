@@ -1,0 +1,65 @@
+h1 {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #333;
+}
+
+/* Estilos para o formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+label {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+input[type="text"] {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border: 2px solid #ccc;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 20rem;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#map {
+    height: 200px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+button[type="submit"]:hover {
+    background-color: #0069d9;
+}
+
+#result{
+    text-align: center;
+    margin: 20px 0px;
+}
