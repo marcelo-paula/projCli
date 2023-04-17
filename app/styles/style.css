@@ -15,11 +15,11 @@ body {
     font-size: 16px;
 }
 
-.hide {
+.clima .hide {
     display: none !important;
 }
 
-.container {
+.clima .container {
     width: 600px;
     margin: 0 auto;
     justify-content: center;
@@ -31,23 +31,23 @@ body {
 }
 
 /* Form */
-.form {
+.clima .form {
     margin-bottom: 30px;
 }
 
-.form h3 {
+.clima .form h3 {
     margin-bottom: 15px;
     font-size: 24px;
 }
 
-.form-input-container {
+.clima .form-input-container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
 }
 
-input[type="text"] {
+.clima input[type="text"] {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -56,7 +56,7 @@ input[type="text"] {
     margin-right: 10px;
 }
 
-button#search {
+.clima button#search {
     background-color: #0d6efd;
     border: none;
     border-radius: 5px;
@@ -67,70 +67,70 @@ button#search {
     transition: all 0.2s ease-in-out;
 }
 
-button#search:hover {
+.clima button#search:hover {
     background-color: #0b5ed7;
 }
 
 /* Clima */
-#weather-data,
-#error-message,
-#loader,
-#suggestions {
+.clima #weather-data,
+.clima #error-message,
+.clima #loader,
+.clima #suggestions {
     border-top: 1px solid var(--cor-branco);
     margin-top: 1.5rem;
     padding-top: 1.5rem;
     text-align: center;
 }
 
-#weather-data h2 {
+.clima #weather-data h2 {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 0.6rem;
 }
 
-#weather-data h2 i {
+.clima #weather-data h2 i {
     font-size: 1rem;
 }
 
-#weather-data span {
+.clima #weather-data span {
     margin: 0.6rem;
 }
 
-#temperature {
+.clima #temperature {
     font-size: 4rem;
 }
 
-#country {
+.clima #country {
     height: 15px;
 }
 
-#description-container {
+.clima #description-container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0.6rem 0;
 }
 
-#description {
+.clima #description {
     text-transform: capitalize;
     font-weight: bold;
 }
 
-#details-container {
+.clima #details-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#details-container #umidity {
+.clima #details-container #umidity {
     border-right: 1px solid var(--cor-branco);
     margin: 0.6rem;
     padding: 0.6rem;
 }
 
 /* Loader */
-#loader i {
+.clima #loader i {
     animation: rotate 1.5s linear infinite;
 }
 
@@ -141,14 +141,14 @@ button#search:hover {
 }
 
 /* Sugestões */
-#suggestions {
+.clima #suggestions {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 30px;
 }
 
-#suggestions button {
+.clima #suggestions button {
     background-color: #eee;
     border: none;
     border-radius: 5px;
@@ -160,6 +160,6 @@ button#search:hover {
     transition: all 0.2s ease-in-out;
 }
 
-#suggestions button:hover {
+.clima #suggestions button:hover {
     background-color: #d5d5d5;
 }

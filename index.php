@@ -13,6 +13,10 @@ $url = (explode('?', $url))[0]; //tudo que for ponto de interrogação é ignora
 
 switch ($url) {
     case '/proj/':
+        $principalController->viewprincipal();
+    break;
+
+    case '/proj/openweather':
         $principalController->viewOpenWeather();
     break;
 

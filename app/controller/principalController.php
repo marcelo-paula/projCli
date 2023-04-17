@@ -20,4 +20,8 @@ class principalController {
     public function viewopencagedata(){
         include 'app/view/opencagedata.html';
     }
+
+    public function viewprincipal(){
+        include 'app/view/principal.html';
+    }
 }

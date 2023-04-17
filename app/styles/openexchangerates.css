@@ -2,24 +2,24 @@ body {
     font-family: Arial, sans-serif;
 }
 
-h1 {
+.taxas h1 {
     font-size: 32px;
     margin-bottom: 24px;
 }
 
-label {
+.taxas label {
     font-size: 18px;
     font-weight: bold;
     margin-right: 16px;
 }
 
-select {
+.taxas select {
     font-size: 18px;
     padding: 8px;
     margin-right: 16px;
 }
 
-button {
+.taxas button {
     font-size: 18px;
     padding: 8px;
     background-color: #007bff;
@@ -29,23 +29,27 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.taxas button:hover {
     background-color: #0062cc;
 }
 
-ul {
+.taxas ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-li {
+.taxas li {
     font-size: 18px;
     margin-bottom: 8px;
 }
 
-li::before {
+.taxas li::before {
     content: '•';
     margin-right: 8px;
     color: #007bff;
+}
+
+.taxas{
+    padding: 100px;
 }
