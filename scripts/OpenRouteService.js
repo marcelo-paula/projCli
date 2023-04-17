@@ -1,57 +1,45 @@
-const form = document.querySelector('form');
-const estado = document.querySelector('#estado');
-const pais = document.querySelector('#pais');
-const map = document.querySelector('#map');
-
-const apiKey = 'Aiur06TlBNSIKZxP7AUL2_8A0Dk18gfjc7y8apI7OjhbEWxS79nIbFN9NAG-qz9v';
-
-form.addEventListener('submit', function (e) {
-  e.preventDefault();
-
-  console.log("oi")
-
-  const estadoValor = estado.value.trim();
-  const paisValor = pais.value.trim();
-
-  if (!estadoValor || !paisValor) {
-    alert('Digite o estado e o país!');
-    return;
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    alert("Geolocalização não é suportada neste navegador.");
   }
+}
 
-  const url = `https://dev.virtualearth.net/REST/v1/Traffic/Incidents/${paisValor}/${estadoValor}?key=${apiKey}`;
+function showPosition(position) {
+  const latitude = position.coords.latitude;
+  const longitude = position.coords.longitude;
+  alert("Sua localização atual é: " + latitude + ", " + longitude);
+}
 
-  fetch(url)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Não foi possível obter os dados');
-      }
-      return response.json();
-    })
-    .then(data => mostrarDados(data.resourceSets[0].resources))
-    .catch(erro => console.log(erro));
-});
 
-function mostrarDados(data) {
-  map.innerHTML = '';
+// Cria o mapa
+const map = L.map("mapid").setView([-23.5489, -46.6388], 13);
 
-  const mapOptions = {
-    credentials: apiKey,
-    center: new Microsoft.Maps.Location(data[0].geolocation.coordinates[0], data[0].geolocation.coordinates[1]),
-    zoom: 10
-  };
+// Adiciona uma camada de mapa
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  attribution:
+    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+}).addTo(map);
 
-  const mapa = new Microsoft.Maps.Map('#map', mapOptions);
+// Adiciona um marcador na posição atual
+function onLocationFound(e) {
+  const radius = e.accuracy / 2;
 
-  for (let i = 0; i < data.length; i++) {
-    const incidente = data[i];
-    const localizacao = new Microsoft.Maps.Location(incidente.geolocation.coordinates[0], incidente.geolocation.coordinates[1]);
+  L.marker(e.latlng)
+    .addTo(map)
+    .bindPopup("Você está aqui!")
+    .openPopup();
 
-    const pushpin = new Microsoft.Maps.Pushpin(localizacao, {
-      title: incidente.description,
-      subTitle: incidente.roadClosed ? 'Estrada fechada' : 'Estrada aberta',
-      icon: incidente.roadClosed ? 'https://bingmapsdemos.blob.core.windows.net/images/traffic-closed.png' : 'https://bingmapsdemos.blob.core.windows.net/images/traffic-congestion.png'
-    });
-    
-    mapa.entities.push(pushpin);
-  }
-} 
+  L.circle(e.latlng, radius).addTo(map);
+}
+
+// Trata erros na obtenção da localização
+function onLocationError(e) {
+  alert(e.message);
+}
+
+// Obtém a localização atual do usuário
+map.on("locationfound", onLocationFound);
+map.on("locationerror", onLocationError);
+map.locate({ setView: true, maxZoom: 16 });
