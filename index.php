@@ -12,31 +12,31 @@ $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $url = (explode('?', $url))[0]; //tudo que for ponto de interrogação é ignorado na url (ex: ?id=1)
 
 switch ($url) {
-    case '/proj/':
+    case '/projCli/':
         $principalController->viewprincipal();
     break;
 
-    case '/proj/openweather':
+    case '/projCli/openweather':
         $principalController->viewOpenWeather();
     break;
 
-    case '/proj/Geonames':
+    case '/projCli/Geonames':
         $principalController->viewGeonames();
     break;
 
-    case '/proj/restcountries':
+    case '/projCli/restcountries':
         $principalController->viewrestcountries();
     break;
 
-    case '/proj/openexchangerates':
+    case '/projCli/openexchangerates':
         $principalController->viewopenexchangerates();
     break;
 
-    case '/proj/opencagedata':
+    case '/projCli/opencagedata':
         $principalController->viewopencagedata();
     break;
 
-    case '/proj/OpenRouteService':
+    case '/projCli/OpenRouteService':
         $principalController->viewOpenRouteService();
     break;
 
