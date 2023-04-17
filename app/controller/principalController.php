@@ -24,4 +24,8 @@ class principalController {
     public function viewprincipal(){
         include 'app/view/principal.html';
     }
+
+    public function viewOpenRouteService(){
+        include 'app/view/OpenRouteService.html';
+    }
 }

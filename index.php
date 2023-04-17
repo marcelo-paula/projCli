@@ -36,6 +36,10 @@ switch ($url) {
         $principalController->viewopencagedata();
     break;
 
+    case '/proj/OpenRouteService':
+        $principalController->viewOpenRouteService();
+    break;
+
     //caso a url não seja encontrada
     default :
         echo 'Página não encontrada';
