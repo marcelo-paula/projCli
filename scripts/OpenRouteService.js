@@ -2,14 +2,14 @@ function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
   } else {
-    alert("Geolocalização não é suportada neste navegador.");
+    alert("Geolocation is not supported in this browser.");
   }
 }
 
 function showPosition(position) {
   const latitude = position.coords.latitude;
   const longitude = position.coords.longitude;
-  alert("Sua localização atual é: " + latitude + ", " + longitude);
+  alert("Your current location is: " + latitude + ", " + longitude);
 }
 
 
@@ -28,7 +28,7 @@ function onLocationFound(e) {
 
   L.marker(e.latlng)
     .addTo(map)
-    .bindPopup("Você está aqui!")
+    .bindPopup("You are here!")
     .openPopup();
 
   L.circle(e.latlng, radius).addTo(map);

@@ -17,7 +17,7 @@ form.addEventListener('submit', async (event) => {
 
   // Verifica se as entradas são válidas; se não forem, exibe uma mensagem de erro e retorna
   if (latitude === '' || longitude === '') {
-    resultDiv.innerText = 'Por favor, insira uma latitude e longitude válidas.';
+    resultDiv.innerText = 'Please enter a valid latitude and longitude.';
     return;
   }
 
@@ -31,7 +31,7 @@ form.addEventListener('submit', async (event) => {
 
     // Verifica se a resposta da API contém resultados; se não houver, exibe uma mensagem de erro e retorna
     if (data.results.length === 0) {
-      resultDiv.innerText = 'Nenhum resultado encontrado.';
+      resultDiv.innerText = 'no results found.';
       return;
     }
 
@@ -57,11 +57,11 @@ form.addEventListener('submit', async (event) => {
     }).addTo(map);
 
     // Adicione um marcador ao mapa
-    L.marker([51.5, -0.09]).addTo(map).bindPopup('Eu sou um marcador!').openPopup();
+    L.marker([51.5, -0.09]).addTo(map).bindPopup('I am a bookmark!').openPopup();
 
   } catch (error) {
     // Em caso de erro, exibe uma mensagem de erro apropriada
     console.error(error);
-    resultDiv.innerText = 'Ocorreu um erro ao buscar as informações de endereço.';
+    resultDiv.innerText = 'An error occurred while fetching the address information.';
   }
 });
