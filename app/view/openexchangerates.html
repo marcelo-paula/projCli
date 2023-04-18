@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -82,20 +82,20 @@
     </nav>
 
     <div class="taxas" style="max-width: 800px; margin: 0 auto;">
-        <h1>Taxas de câmbio</h1>
+        <h1>Exchange rates</h1>
 
         <div style="display: flex; align-items: center; margin-bottom:
             24px;">
-            <label for="currency">Escolha uma moeda:</label>
+            <label for="currency">choose a currency:</label>
             <select id="currency">
                 <option value="EUR">Euro</option>
-                <option value="GBP">Libra Esterlina</option>
-                <option value="JPY">Iene Japonês</option>
-                <option value="CAD">Dólar Canadense</option>
-                <option value="AUD">Dólar Australiano</option>
+                <option value="GBP">Pound Sterling</option>
+                <option value="JPY">japanese yen</option>
+                <option value="CAD">Canadian dollar</option>
+                <option value="AUD">Australian Dollar</option>
                 <option value="BRL">Real</option>
             </select>
-            <button onclick="getExchangeRate()">Buscar taxa</button>
+            <button onclick="getExchangeRate()">fetch rate</button>
         </div>
 
         <div>
@@ -103,8 +103,8 @@
         </div>
 
         <div style="margin-top: 48px;">
-            <h2>Moedas disponíveis:</h2>
-            <button onclick="getCurrencies()">Atualizar lista</button>
+            <h2>Available currencies:</h2>
+            <button onclick="getCurrencies()">Update list</button>
             <ul id="currencies-list"></ul>
         </div>
     </div>

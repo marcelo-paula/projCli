@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -26,6 +26,9 @@
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css"
       crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="scripts/leaflet.js"></script>
     <!-- Adicione o JS do Leaflet -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js"
@@ -95,7 +98,7 @@
     </nav>
 
     <div class="geo">
-      <h1>Geocodificação</h1>
+      <h1>Geocoding</h1>
       <form id="geocode-form">
         <label for="latitude-input">Latitude:</label>
         <input type="text" id="latitude-input" />
@@ -103,7 +106,7 @@
         <label for="longitude-input">Longitude:</label>
         <input type="text" id="longitude-input" />
 
-        <button type="submit">Buscar endereço</button>
+        <button type="submit">search address</button>
       </form>
 
       <div id="result"></div>
