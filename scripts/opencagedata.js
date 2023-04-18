@@ -49,7 +49,7 @@ form.addEventListener('submit', async (event) => {
     var map = L.map('map').setView([51.505, -0.09], 13);
 
     // Adicione uma camada de mapa do OpenStreetMap
-    L.tileLayer('./caminho/para/leaflet.css', {
+    L.tileLayer('./app/styles/leaflet.css', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
         maxZoom: 18,
         tileSize: 512,
